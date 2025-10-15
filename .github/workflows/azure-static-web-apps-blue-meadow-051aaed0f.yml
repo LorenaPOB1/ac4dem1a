@@ -26,7 +26,7 @@ jobs:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_BLUE_MEADOW_051AAED0F }}
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           action: "upload"
-          app_location: "poke-dex-lab/source/pokedex-angular"
+          app_location: "sistemas-distribuidos/poke-dex-lab/source/pokedex-angular"
           output_location: "dist/pokedex-angular"
           api_location: ""
 
@@ -40,4 +40,3 @@ jobs:
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_BLUE_MEADOW_051AAED0F }}
           action: "close"
-
