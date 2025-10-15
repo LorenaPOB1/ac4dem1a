@@ -1,0 +1,14 @@
+{
+  "navigationFallback": {
+    "rewrite": "/index.html",
+    "exclude": ["/assets/*", "/*.css", "/*.js", "/*.png", "/*.jpg", "/*.svg"]
+  },
+  "globalHeaders": {
+    "Content-Security-Policy": "default-src 'self'; base-uri 'self'; frame-ancestors 'none'; object-src 'none'; script-src 'self' 'sha256-QmIi/LDJnOEYAO9CVS/+JVvnKMiVsY6fn0FVoHnkPfg='; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; img-src 'self' data: https: https://raw.githubusercontent.com https://assets.pokemon.com; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self' https://pokeapi.co https://*.pokeapi.co https://graphql-pokeapi.graphcdn.app https://raw.githubusercontent.com https://assets.pokemon.com; worker-src 'self'; manifest-src 'self'; upgrade-insecure-requests; block-all-mixed-content;",
+    "X-Frame-Options": "DENY",
+    "Permissions-Policy": "accelerometer=(), autoplay=(), camera=(), clipboard-read=(), clipboard-write=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=(), fullscreen=()",
+    "Referrer-Policy": "strict-origin-when-cross-origin",
+    "X-Content-Type-Options": "nosniff",
+    "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload"
+  }
+}
