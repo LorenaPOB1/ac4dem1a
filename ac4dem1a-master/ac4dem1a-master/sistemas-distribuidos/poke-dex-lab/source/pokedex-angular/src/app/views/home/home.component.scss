@@ -1,0 +1,46 @@
+@import 'utils/font-sizes';
+@import 'utils/media-query.scss';
+
+.home {
+  &__header {
+    display: flex;
+    align-items: center;
+    height: 154px;
+    width: 254px;
+    margin: 0 auto;
+    text-align: center;
+
+    h1 {
+      margin: 0;
+    }
+
+    .since-until-years {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      span {
+        font-size: $font-size-smallest;
+        padding: 0 1em;
+      }
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-rows: min-content auto;
+    grid-template-columns: min-content 1fr;
+    margin: 0 15px 25px 15px;
+    min-height: calc(100vh - 125px);
+    max-width: 1366px;
+    margin: 0 auto;
+    padding: 25px 4em 4em;
+
+    @include respond(xs, sm) {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(2, auto);
+      justify-content: center;
+      padding: 4em 1em;
+    }
+  }
+}

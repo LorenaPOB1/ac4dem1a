@@ -1,0 +1,35 @@
+@import 'utils/colors';
+@import 'utils/transition';
+
+.dialog-box {
+  background-color: $white;
+  position: relative;
+  transition: $fast;
+  height: 100%;
+
+  &.dialog-box--large {
+    padding: 1em 2em;
+  }
+
+  &.dialog-box--small {
+  }
+
+  &.dialog-box--hoverable:hover {
+    cursor: pointer;
+  }
+
+  border: (2px) solid $black;
+  border-radius: 12px;
+
+  &--hoverable:hover {
+    border-color: $crimson;
+
+    &:before {
+      border-color: $mauvelous;
+    }
+
+    &:after {
+      border-color: $cherub;
+    }
+  }
+}

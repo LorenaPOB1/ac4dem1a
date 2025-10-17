@@ -1,0 +1,21 @@
+<div class="status-bar">
+  <div class="message">{{ _pokemons.length | searchResultsMessage }}</div>
+  <div class="sort-by">
+    <label for="field-sort-by">Order by:</label>
+    <select
+      name="field-sort-by"
+      id="field-sort-by"
+      [ngModel]="currentPokemonSortBy"
+      (ngModelChange)="changePokemonSortBy($event)"
+    >
+      <option [value]="pokemonSortByHeightASC">Height ↗</option>
+      <option [value]="pokemonSortByHeightDSC">Height ↘</option>
+      <option [value]="pokemonSortByNameASC">Name (A-Z)</option>
+      <option [value]="pokemonSortByNameDSC">Name (Z-A)</option>
+      <option [value]="pokemonSortByNumberASC">Number ↗</option>
+      <option [value]="pokemonSortByNumberDSC">Number ↘</option>
+      <option [value]="pokemonSortByWeightASC">Weight ↗</option>
+      <option [value]="pokemonSortByWeightDSC">Weight ↘</option>
+    </select>
+  </div>
+</div>

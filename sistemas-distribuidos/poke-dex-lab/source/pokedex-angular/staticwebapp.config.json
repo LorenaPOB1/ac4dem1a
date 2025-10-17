@@ -1,14 +1,18 @@
 {
   "navigationFallback": {
-    "rewrite": "/index.html",
-    "exclude": ["/assets/*", "/*.css", "/*.js", "/*.png", "/*.jpg", "/*.svg"]
+    "rewrite": "index.html"
+  },
+  "responseOverrides": {
+    "404": {
+      "rewrite": "/404.html"
+    }
   },
   "globalHeaders": {
-    "Content-Security-Policy": "default-src 'self'; base-uri 'self'; frame-ancestors 'none'; object-src 'none'; script-src 'self' 'sha256-QmIi/LDJnOEYAO9CVS/+JVvnKMiVsY6fn0FVoHnkPfg='; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; img-src 'self' data: https: https://raw.githubusercontent.com https://assets.pokemon.com; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self' https://pokeapi.co https://*.pokeapi.co https://graphql-pokeapi.graphcdn.app https://raw.githubusercontent.com https://assets.pokemon.com; worker-src 'self'; manifest-src 'self'; upgrade-insecure-requests; block-all-mixed-content;",
-    "X-Frame-Options": "DENY",
-    "Permissions-Policy": "accelerometer=(), autoplay=(), camera=(), clipboard-read=(), clipboard-write=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=(), fullscreen=()",
-    "Referrer-Policy": "strict-origin-when-cross-origin",
+    "Content-Security-Policy": "default-src 'self'; img-src 'self' data: https: https://raw.githubusercontent.com; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self' https://pokeapi.co https://*.pokeapi.co; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action 'self'; upgrade-insecure-requests",
+    "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
     "X-Content-Type-Options": "nosniff",
-    "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload"
+    "X-Frame-Options": "DENY",
+    "Referrer-Policy": "no-referrer-when-downgrade",
+    "Permissions-Policy": "geolocation=(), microphone=(), camera=(), payment=(), usb=()",
+    "X-Permitted-Cross-Domain-Policies": "none"
   }
-}
